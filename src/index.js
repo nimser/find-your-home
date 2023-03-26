@@ -1,5 +1,5 @@
-import { createCard } from "./createCard";
-import houses from "./houseToRent";
+import { createCard } from "./createCard.js";
+import houses from "./houseToRent.js";
 
 const displayHouses = (houses) => {
   const container = document.querySelector(".cards");
