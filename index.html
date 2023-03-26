@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>🏠 Find your home</h1>
+    </header>
+    <div class="wrapper">
+      <div class="filters">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="🔎 Type to search"
+        />
+        <select class="select" name="home">
+          <option value="All">All</option>
+          <option value="Flat">Flat</option>
+          <option value="House">House</option>
+        </select>
+        <div>
+          <label for="available">Show only Available </label>
+          <input type="checkbox" class="available-checkbox" name="checkbox" />
+        </div>
+      </div>
+      <div class="cards">
+        <!-- This is where the cards should go -->
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
