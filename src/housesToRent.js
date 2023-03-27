@@ -1,4 +1,4 @@
-const houseToRent = [
+const housesToRent = [
   {
     name: "Modern flat",
     type: "House",
@@ -39,4 +39,4 @@ const houseToRent = [
   }
 ];
 
-export default houseToRent;
+export default housesToRent;

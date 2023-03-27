@@ -1,25 +1,22 @@
-import { createCard } from "./createCard";
-import houses from "./houseToRent";
+import { createCard } from "./createCard.js"
+import houses from "./housesToRent.js"
 
-const displayHouses = (houses) => {
-  const container = document.querySelector(".cards");
-  container.replaceChildren(...houses.map(createCard));
-};
+const container = document.querySelector(".cards")
 
-const render = () => {
-  const showOnlyAvailableCheckbox = document.querySelector(
-    ".available-checkbox"
-  );
+const displayHouses = houses => {
+  houses.forEach(house =>
+    container.replaceChildren(...houses.map(createCard))
+  )
+}
 
-  showOnlyAvailableCheckbox.addEventListener("click", (event) => {
-    if (event.target.checked) {
-      displayHouses(houses.filter((h) => h.available === true));
-    } else {
-      displayHouses(houses);
-    }
-  });
+const showOnlyAvailable = document.querySelector(".available-checkbox")
+showOnlyAvailable.addEventListener("click", event => {
+  const isChecked = event.target.checked
 
-  displayHouses(houses);
-};
+  displayHouses(isChecked ? houses.filter(h => h.available === true) : houses)
+})
 
-render();
+displayHouses(houses)
+
+
+
